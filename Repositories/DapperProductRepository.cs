@@ -32,7 +32,7 @@ namespace ASPNETKata.Shared
 
         public void InsertProduct(Product prod)
         {
-            _connection.Execute("INSERT into product (Name) values (name)", new {name = prod.Name});
+            _connection.Execute("INSERT into product (Name) values (@name)", new {name = prod.Name});
         }
 
         public Product GetDetails(int productId)
